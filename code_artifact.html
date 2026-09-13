@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張清俊 專業顧問 | 米米家族辦公室 - 跨領域家族財務管理專家</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts (Noto Sans TC & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#0f172a',
+                            900: '#090d16',
+                            950: '#030712',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#d97706',
+                            600: '#b45309',
+                            100: '#fef3c7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Glassmorphism & Custom Effects */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #d97706 50%, #ca8a04 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        }
+        .gold-gradient-bg:hover {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        /* */
+        /* Smooth Theme Transitions */
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Light Mode Custom Styling Overrides */
+        body.light-mode {
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        body.light-mode .glass-nav {
+            background: rgba(255, 255, 255, 0.88);
+            border-bottom-color: #e2e8f0;
+        }
+        body.light-mode .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(217, 119, 6, 0.25);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
+        }
+        body.light-mode section {
+            background-color: #f8fafc !important;
+        }
+        body.light-mode section#about,
+        body.light-mode section#process,
+        body.light-mode section#contact {
+            background-color: #ffffff !important;
+        }
+        body.light-mode .text-white {
+            color: #0f172a !important;
+        }
+        body.light-mode .text-slate-100 {
+            color: #1e293b !important;
+        }
+        body.light-mode .text-slate-200 {
+            color: #334155 !important;
+        }
+        body.light-mode .text-slate-300,
+        body.light-mode .text-slate-400 {
+            color: #475569 !important;
+        }
+        body.light-mode .border-slate-800,
+        body.light-mode .border-slate-800\/80,
+        body.light-mode .border-slate-800\/60 {
+            border-color: #e2e8f0 !important;
+        }
+        body.light-mode .bg-slate-900,
+        body.light-mode .bg-slate-900\/90,
+        body.light-mode .bg-slate-900\/95,
+        body.light-mode .bg-slate-950 {
+            background-color: #ffffff !important;
+        }
+        body.light-mode .bg-slate-800,
+        body.light-mode .bg-slate-800\/80 {
+            background-color: #f1f5f9 !important;
+        }
+        body.light-mode input,
+        body.light-mode select,
+        body.light-mode textarea {
+            background-color: #ffffff !important;
+            color: #0f172a !important;
+            border-color: #cbd5e1 !important;
+        }
+        body.light-mode footer {
+            background-color: #f1f5f9 !important;
+            border-top-color: #e2e8f0 !important;
+        }
+        body.light-mode .theme-toggle-btn {
+            background-color: #f1f5f9;
+            color: #d97706;
+            border-color: #cbd5e1;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Brand -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg gold-gradient-bg flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg shadow-amber-900/30">
+                        米
+                    </div>
+                    <div>
+                        <span class="text-lg font-bold tracking-wider text-slate-100 block group-hover:text-amber-400 transition">米米家族辦公室</span>
+                        <span class="text-xs text-amber-500 font-medium tracking-widest block">MIMI FAMILY OFFICE</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="text-slate-300 hover:text-amber-400 transition text-sm font-medium">關於顧問</a>
+                    <a href="#services" class="text-slate-300 hover:text-amber-400 transition text-sm font-medium">六大服務領域</a>
+                    <a href="#advantage" class="text-slate-300 hover:text-amber-400 transition text-sm font-medium">跨界視角優勢</a>
+                    <a href="#process" class="text-slate-300 hover:text-amber-400 transition text-sm font-medium">服務流程</a>
+                    <a href="#assessment" class="text-slate-300 hover:text-amber-400 transition text-sm font-medium">需求評估</a>
+                    
+                    <!-- Background Music Switch Button (Desktop) -->
+                    <button id="music-btn-desktop" onclick="toggleMusic()" type="button" class="p-2.5 rounded-full border border-slate-700 bg-slate-900 text-amber-400 hover:text-amber-300 hover:border-amber-500/50 transition flex items-center justify-center relative group" aria-label="切換背景音樂" title="播放/暫停背景音樂">
+                        <i id="music-icon-desktop" class="fa-solid fa-music text-base"></i>
+                        <span id="music-pulse-desktop" class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-amber-400 hidden animate-ping"></span>
+                    </button>
+
+                    <!-- Theme Toggle Switch Button (Desktop) -->
+                    <button onclick="toggleTheme()" type="button" class="theme-toggle-btn p-2.5 rounded-full border border-slate-700 bg-slate-900 text-amber-400 hover:text-amber-300 hover:border-amber-500/50 transition flex items-center justify-center" aria-label="切換主題模式">
+                        <i id="theme-icon-desktop" class="fa-solid fa-sun text-base"></i>
+                    </button>
+
+                    <a href="#contact" class="px-5 py-2.5 rounded-full gold-gradient-bg text-slate-950 font-semibold text-sm shadow-md hover:shadow-amber-500/20 transition transform active:scale-95">
+                        立即預約諮詢
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu & Theme Toggle Button -->
+                <div class="md:hidden flex items-center gap-2.5">
+                    <!-- Music Toggle Button (Mobile) -->
+                    <button id="music-btn-mobile" onclick="toggleMusic()" type="button" class="p-2 rounded-full border border-slate-700 bg-slate-900 text-amber-400 transition flex items-center justify-center" aria-label="切換背景音樂" title="播放/暫停背景音樂">
+                        <i id="music-icon-mobile" class="fa-solid fa-music text-base"></i>
+                    </button>
+                    <button onclick="toggleTheme()" type="button" class="theme-toggle-btn p-2 rounded-full border border-slate-700 bg-slate-900 text-amber-400 transition flex items-center justify-center" aria-label="切換主題模式">
+                        <i id="theme-icon-mobile" class="fa-solid fa-sun text-base"></i>
+                    </button>
+                    <button id="mobile-menu-btn" type="button" class="text-slate-300 hover:text-amber-400 focus:outline-none p-2" aria-label="切換選單">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 backdrop-blur-xl px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-800">關於顧問</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-800">六大服務領域</a>
+            <a href="#advantage" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-800">跨界視角優勢</a>
+            <a href="#process" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-800">服務流程</a>
+            <a href="#assessment" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-amber-400 hover:bg-slate-800">需求評估</a>
+            <a href="#contact" class="mobile-link block w-full text-center mt-4 px-5 py-3 rounded-full gold-gradient-bg text-slate-950 font-semibold shadow-md">
+                立即預約諮詢
+            </a>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <!-- Background Decorative Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Hero Left Column: Intro Text (佔 9/12 = 3/4 幅面) -->
+                <div class="lg:col-span-9 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                        米米家族辦公室 · 專屬家族財務顧問
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        跨界思維引航 <br>
+                        <span class="gold-gradient-text">永續傳承家族財務新藍圖</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-slate-300 font-light max-w-3xl mx-auto lg:mx-0 leading-relaxed">
+                        我是 <strong class="text-white font-semibold">張清俊</strong> 顧問。整合商務、媒體、政治與 AI 應用多元背景，為高資產客戶與家族提供全方位、前瞻性的一站式財務管理與資產配置方案。
+                    </p>
+
+                    <!-- Feature Tags -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-2">
+                        <span class="px-3 py-1 bg-slate-800/80 rounded-md text-xs font-medium text-slate-300 border border-slate-700/50"><i class="fa-solid fa-check text-amber-400 mr-1.5"></i>稅務規劃</span>
+                        <span class="px-3 py-1 bg-slate-800/80 rounded-md text-xs font-medium text-slate-300 border border-slate-700/50"><i class="fa-solid fa-check text-amber-400 mr-1.5"></i>不動產與證券配置</span>
+                        <span class="px-3 py-1 bg-slate-800/80 rounded-md text-xs font-medium text-slate-300 border border-slate-700/50"><i class="fa-solid fa-check text-amber-400 mr-1.5"></i>境內外資產整合</span>
+                        <span class="px-3 py-1 bg-slate-800/80 rounded-md text-xs font-medium text-slate-300 border border-slate-700/50"><i class="fa-solid fa-check text-amber-400 mr-1.5"></i>AI智慧決策視角</span>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="pt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full gold-gradient-bg text-slate-950 font-bold text-base shadow-lg shadow-amber-500/20 hover:scale-105 transition duration-200 text-center">
+                            預約專屬私人諮詢
+                        </a>
+                        <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900 border border-slate-700 hover:border-amber-500/50 text-slate-200 font-semibold text-base transition text-center hover:bg-slate-800">
+                            探索服務方案 <i class="fa-solid fa-arrow-down ml-2 text-xs text-amber-400"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right Column: Profile Card Visual (佔 3/12 = 精準 1/4 版面) -->
+                <div class="lg:col-span-3 relative">
+                    <div class="relative mx-auto max-w-xs lg:max-w-none">
+                        <!-- Outer Glow Frame -->
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-b from-amber-500 via-amber-600/50 to-amber-900 opacity-40 blur-lg"></div>
+                        
+                        <!-- Main Card with Full Portrait Headshot -->
+                        <div class="relative glass-card rounded-3xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900/90 group">
+                            <!-- Image Frame taking primary vertical presence -->
+                            <div class="w-full aspect-[3/4] relative overflow-hidden bg-slate-800">
+                                <img src="https://i.pinimg.com/736x/21/dd/fe/21ddfec7c3fafd10a8330de056129ec6.jpg" 
+                                     alt="張清俊 專業顧問" 
+                                     class="w-full h-full object-cover object-top transform group-hover:scale-105 transition duration-500 ease-out"
+                                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-slate-900 flex flex-col items-center justify-center text-amber-400 p-6 text-center\'><i class=\'fa-solid fa-user-tie text-6xl mb-3\'></i><p class=\'font-bold text-lg text-white\'>張清俊</p><p class=\'text-xs text-slate-400\'>專業顧問</p></div>';">
+                                
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                
+                                <!-- Floating Badge -->
+                                <div class="absolute bottom-3 left-3 right-3 bg-slate-900/85 backdrop-blur-md border border-slate-700/80 rounded-2xl p-3 text-center">
+                                    <h3 class="text-xl font-bold text-white tracking-wide">張清俊</h3>
+                                    <p class="text-amber-400 text-xs font-semibold mt-0.5">米米家族辦公室 專業顧問</p>
+                                </div>
+                            </div>
+
+                            <!-- Highlights Footer -->
+                            <div class="p-4 bg-slate-950/80 border-t border-slate-800 text-xs space-y-2 text-slate-300">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                                    <span>家族傳承與風險全方位整合</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-400">
+                                    <i class="fa-solid fa-certificate text-amber-500"></i>
+                                    <span>商務 · 媒體 · 政治 · AI 跨界智庫</span>
+                                </div>
+                                <div class="pt-1 flex items-center justify-between border-t border-slate-800/80">
+                                    <span class="text-[11px] text-slate-400">社群連結：</span>
+                                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-600/20 text-blue-400 hover:bg-blue-600 hover:text-white transition text-xs font-medium border border-blue-500/30">
+                                        <i class="fa-brands fa-facebook"></i> Facebook 專頁
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-semibold text-amber-400 uppercase tracking-widest mb-2">ABOUT ADVISOR</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">關於 張清俊 顧問</p>
+                <div class="w-12 h-1 gold-gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+                    <div class="flex items-center gap-4 mb-2 pb-2 border-b border-slate-800/80">
+                        <img src="https://i.pinimg.com/736x/21/dd/fe/21ddfec7c3fafd10a8330de056129ec6.jpg" 
+                             alt="張清俊 顧問大頭照" 
+                             class="w-14 h-14 rounded-full border-2 border-amber-500/60 object-cover shadow-lg" 
+                             onerror="this.style.display='none'">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">張清俊 顧問</h3>
+                            <p class="text-xs text-amber-400 font-medium">米米家族辦公室 跨領域資深顧問</p>
+                        </div>
+                    </div>
+
+                    <p class="font-light">
+                        在現代經濟環境快速變遷與法規日益複雜的背景下，家族資產的維護與傳承，早已超越單一傳統金融產品的範疇。
+                    </p>
+                    <p class="font-light">
+                        作為 <strong class="text-white font-medium">米米家族辦公室的專業顧問</strong>，我致力於提供全面且量身打造的家族財務管理方案。我們不僅關注短期的投資報酬，更著眼於家族財富跨世代的穩健傳承、風險防禦與戰略佈局。
+                    </p>
+                    <p class="font-light">
+                        憑藉橫跨 <span class="text-amber-400 font-medium">商務營運、媒體溝通、政治形勢研判以及 AI 科技應用</span> 的多維度背景，我習慣站在更高的戰略戰術視角，全面拆解客戶面臨的挑戰，協助您在變局中制定最明智的財務與資產策略。
+                    </p>
+                </div>
+
+                <!-- 4 Pillars of Background -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-2xl mb-4 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">商務實務</h3>
+                        <p class="text-xs text-slate-400">敏銳商業嗅覺，熟知企業運籌、資本運作與市場動態。</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-2xl mb-4 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">媒體視角</h3>
+                        <p class="text-xs text-slate-400">高竿的訊息解析與溝通能力，洞察公眾輿情與趨勢演變。</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-2xl mb-4 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">政治法規</h3>
+                        <p class="text-xs text-slate-400">掌握地緣政治、政策風向與國際稅務法規的潛在威脅與機遇。</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-2xl mb-4 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">AI 賦能</h3>
+                        <p class="text-xs text-slate-400">活用先進 AI 工具進行高效數據分析、風險檢測與流程優化。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-semibold text-amber-400 uppercase tracking-widest mb-2">CORE SERVICES</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">六大專業家族財務管理方案</p>
+                <p class="text-slate-400 mt-3">全方位覆蓋個人、家族與企業的全生命週期資產需求</p>
+                <div class="w-12 h-1 gold-gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: 稅務規劃 -->
+                <div class="glass-card rounded-2xl p-8 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-900/60 transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-300">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">稅務規劃與合規</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            梳理境內外遺贈稅、所得稅、房地合一稅及股利所得稅，提供合法合規且具經濟效益的資產移轉與傳承稅務佈局。
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>家族傳承遺贈稅預防</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>股權與資產稅務合規診斷</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: 不動產配置 -->
+                <div class="glass-card rounded-2xl p-8 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-900/60 transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-300">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">不動產資產配置</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            評估商業與住宅不動產效益，結合產權結構設計、租金收益率最佳化及資產活化方案，發揮不動產抗通膨與資產防護效益。
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>不動產產權與信託規劃</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>資產活化與收益率極大化</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: 證券投資 -->
+                <div class="glass-card rounded-2xl p-8 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-900/60 transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-300">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">證券投資與組合策略</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            依據家族風險偏好與現金流需求，建構全球化證券、基金與固定收益組合，降低波動並維持穩健資產成長動能。
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>全球資產配置與風險分散</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>穩健現金流投資組合策略</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: 保險健檢 -->
+                <div class="glass-card rounded-2xl p-8 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-900/60 transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-300">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">保險健檢與風險防衛</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            全面盤點家族成員與企業保單，剔除無效保費，強化大額資產保全、預留稅源與極端風險下的家族安全網。
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>全家保單健檢與冗餘清理</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>預留稅源與資產隔離島設計</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5: 境內外資產 -->
+                <div class="glass-card rounded-2xl p-8 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-900/60 transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-300">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">境內外資產整合</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            協助跨境企業與國際家族佈局境內外資產架構，因應 CRS、反避稅條款，達成跨國資本的安全合規流動。
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>跨境資產架構與信託佈局</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>CRS與國際反避稅因應策劃</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6: 融資貸款 -->
+                <div class="glass-card rounded-2xl p-8 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-900/60 transition duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition duration-300">
+                            <i class="fa-solid fa-vault"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">融資貸款與資金槓桿</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            靈活調配不動產抵押、股票質押與企業信用融資，優化利率與還款結構，確保流動性並極大化投資槓桿效益。
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>高額融資與條件談判優化</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-amber-500 mr-2"></i>資產流動性與短中長期調度</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="advantage" class="py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest block">CROSS-DISCIPLINARY ADVANTAGE</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                        突破單一領域盲點 <br>
+                        <span class="gold-gradient-text">多元戰略角色的加乘效果</span>
+                    </h2>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        傳統金融顧問往往僅從商品銷售角度出發，缺乏對整體大局的綜觀評估。張清俊顧問憑藉多重背景，為您的家族資產注入全新的解決方案視角。
+                    </p>
+                    
+                    <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm flex items-start gap-3">
+                        <i class="fa-solid fa-quote-left text-2xl text-amber-400 flex-shrink-0 mt-1"></i>
+                        <p>「財務管理不只是數字遊戲，更是包含了社會溝通、政治趨勢、技術演變與法律邊界的綜合戰略。」</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/30 transition">
+                        <div class="text-amber-400 text-3xl font-black mb-2">01.</div>
+                        <h3 class="text-lg font-bold text-white mb-2"><i class="fa-solid fa-briefcase text-amber-500 mr-2"></i>商務運籌思維</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">理解企業主的實際營運痛點，能完美銜接「企業公有資金」與「家族私人資產」，打造最佳資本配置通道。</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/30 transition">
+                        <div class="text-amber-400 text-3xl font-black mb-2">02.</div>
+                        <h3 class="text-lg font-bold text-white mb-2"><i class="fa-solid fa-newspaper text-amber-500 mr-2"></i>媒體溝通經驗</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">善於將複雜的金融法規與條文簡化，並在家族成員間進行高效溝通，預防因溝通不良引起的家族財務分歧。</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/30 transition">
+                        <div class="text-amber-400 text-3xl font-black mb-2">03.</div>
+                        <h3 class="text-lg font-bold text-white mb-2"><i class="fa-solid fa-landmark text-amber-500 mr-2"></i>政治與政策研判</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">精準解讀政策法規演變與全球政經形勢，幫助客戶提早做好地緣政治與稅務變動的防禦準備。</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/30 transition">
+                        <div class="text-amber-400 text-3xl font-black mb-2">04.</div>
+                        <h3 class="text-lg font-bold text-white mb-2"><i class="fa-solid fa-robot text-amber-500 mr-2"></i>AI 科技高效賦能</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">善用 AI 工具進行跨資產類別數據整合分析，快速生成模擬情境，提高決策效率與精準度。</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 bg-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-semibold text-amber-400 uppercase tracking-widest mb-2">SERVICE PROCESS</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">嚴謹客制化的諮詢流程</p>
+                <p class="text-slate-400 mt-2">四個清晰步驟，開啟您家族財務傳承的新篇章</p>
+                <div class="w-12 h-1 gold-gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                
+                <!-- Step 1 -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-800 relative text-center group hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-full gold-gradient-bg text-slate-950 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">初步需求溝通</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        線上或面對面深度訪談，釐清家族資產現況、核心痛點與長遠目標，簽署保密協定。
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-800 relative text-center group hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-full gold-gradient-bg text-slate-950 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">資產盤點與診斷</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        運用 AI 工具與跨界視角，全方位健檢稅務、保單、不動產與境內外投資組合。
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-800 relative text-center group hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-full gold-gradient-bg text-slate-950 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">定制客製方案</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        提交涵蓋六大領域的量身報告，擬定短中長期執行路線圖與風險隔離機制。
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-card p-6 rounded-2xl border border-slate-800 relative text-center group hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-full gold-gradient-bg text-slate-950 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        4
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">方案落地與追蹤</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        精準對接專業團隊落地執行，並建立定期覆盤機制，隨外部環境靈活調整。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="assessment" class="py-24 bg-slate-950 relative border-t border-b border-slate-800/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest block mb-1">INTERACTIVE TOOL</span>
+                <h2 class="text-3xl font-extrabold text-white">家族財務需求快速快篩</h2>
+                <p class="text-slate-400 text-sm mt-2">勾選您當前關心的財務議題，系統將為您初步生成諮詢導向建議</p>
+            </div>
+
+            <div class="glass-card p-6 sm:p-10 rounded-3xl border border-slate-800 shadow-2xl">
+                <form id="assessment-form" onsubmit="event.preventDefault(); calculateAssessment();">
+                    <div class="space-y-4 mb-8">
+                        <label class="block text-slate-200 font-semibold mb-3">請選擇您目前最希望優化或面臨的課題（可多選）：</label>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="flex items-center p-3.5 bg-slate-900 rounded-xl border border-slate-800 cursor-pointer hover:border-amber-500/40 transition">
+                                <input type="checkbox" name="need" value="tax" class="w-4 h-4 text-amber-500 rounded focus:ring-amber-400 bg-slate-800 border-slate-700">
+                                <span class="ml-3 text-sm text-slate-300">不動產產權與房地合一稅規劃</span>
+                            </label>
+
+                            <label class="flex items-center p-3.5 bg-slate-900 rounded-xl border border-slate-800 cursor-pointer hover:border-amber-500/40 transition">
+                                <input type="checkbox" name="need" value="heritage" class="w-4 h-4 text-amber-500 rounded focus:ring-amber-400 bg-slate-800 border-slate-700">
+                                <span class="ml-3 text-sm text-slate-300">家族財富世代繼承與遺贈稅預籌</span>
+                            </label>
+
+                            <label class="flex items-center p-3.5 bg-slate-900 rounded-xl border border-slate-800 cursor-pointer hover:border-amber-500/40 transition">
+                                <input type="checkbox" name="need" value="insurance" class="w-4 h-4 text-amber-500 rounded focus:ring-amber-400 bg-slate-800 border-slate-700">
+                                <span class="ml-3 text-sm text-slate-300">既存保單全盤健檢與資產保全</span>
+                            </label>
+
+                            <label class="flex items-center p-3.5 bg-slate-900 rounded-xl border border-slate-800 cursor-pointer hover:border-amber-500/40 transition">
+                                <input type="checkbox" name="need" value="overseas" class="w-4 h-4 text-amber-500 rounded focus:ring-amber-400 bg-slate-800 border-slate-700">
+                                <span class="ml-3 text-sm text-slate-300">境內外資產整合與國際避稅法令因應</span>
+                            </label>
+
+                            <label class="flex items-center p-3.5 bg-slate-900 rounded-xl border border-slate-800 cursor-pointer hover:border-amber-500/40 transition">
+                                <input type="checkbox" name="need" value="loan" class="w-4 h-4 text-amber-500 rounded focus:ring-amber-400 bg-slate-800 border-slate-700">
+                                <span class="ml-3 text-sm text-slate-300">低成本融資貸款與資金流動性活化</span>
+                            </label>
+
+                            <label class="flex items-center p-3.5 bg-slate-900 rounded-xl border border-slate-800 cursor-pointer hover:border-amber-500/40 transition">
+                                <input type="checkbox" name="need" value="ai" class="w-4 h-4 text-amber-500 rounded focus:ring-amber-400 bg-slate-800 border-slate-700">
+                                <span class="ml-3 text-sm text-slate-300">希望引進 AI 科技進行投資組合診斷</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl gold-gradient-bg text-slate-950 font-bold text-base hover:shadow-lg hover:shadow-amber-500/20 transition">
+                        生成專屬健檢方向與預約
+                    </button>
+                </form>
+
+                <!-- Assessment Result Modal / Container -->
+                <div id="assessment-result" class="hidden mt-6 p-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-slate-200 animate-fadeIn">
+                    <h4 class="text-lg font-bold text-amber-400 mb-2"><i class="fa-solid fa-circle-info mr-2"></i>初步診斷建議方向：</h4>
+                    <p id="assessment-text" class="text-sm leading-relaxed mb-4 text-slate-300"></p>
+                    <a href="#contact" onclick="fillFormFromAssessment()" class="inline-flex items-center text-xs font-bold text-amber-400 hover:text-amber-300 underline gap-1">
+                        帶入此結果並預約張清俊顧問 1對1 深度諮詢 <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest block mb-2">CONTACT US</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">預約私人顧問諮詢</h2>
+                        <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                            歡迎隨時與我們聯繫。我們將嚴格恪守高規格保密原則，為您安排專屬的1對1顧問時間。
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 text-xl flex-shrink-0">
+                                <i class="fa-solid fa-building-user"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-slate-400">所屬機構</h3>
+                                <p class="text-base font-medium text-white">米米家族辦公室 (Mimi Family Office)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 text-xl flex-shrink-0">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-slate-400">專業顧問</h3>
+                                <p class="text-base font-medium text-white">張清俊 (Qingjun Zhang)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 text-xl flex-shrink-0">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-slate-400">主要服務範疇</h3>
+                                <p class="text-base font-medium text-white">稅務 · 不動產 · 證券投資 · 保險健檢 · 境內外資產 · 融資貸款</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-amber-400 text-xl flex-shrink-0">
+                                <i class="fa-solid fa-shield-cat"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-slate-400">機密安全承諾</h3>
+                                <p class="text-base font-medium text-white">簽署 NDA 保密合約，保障家族數據與隱私絕不外洩</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-blue-400 text-xl flex-shrink-0">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-slate-400">社群平台 / 官方臉書</h3>
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-1.5 px-4 py-2 rounded-xl bg-blue-600/20 border border-blue-500/40 text-blue-400 hover:bg-blue-600 hover:text-white transition text-sm font-medium">
+                                    <i class="fa-brands fa-facebook text-base"></i>
+                                    <span>追蹤張清俊顧問 Facebook 專頁</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-75"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-12 text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg gold-gradient-bg flex items-center justify-center text-slate-950 font-bold text-sm">
+                        米
+                    </div>
+                    <div>
+                        <span class="text-sm font-bold text-slate-300">米米家族辦公室 · 張清俊專業顧問</span>
+                        <p class="text-slate-500 text-[11px] mt-0.5">Family Wealth Management & Cross-Disciplinary Solutions</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 text-slate-400">
+                    <a href="#about" class="hover:text-amber-400 transition">關於顧問</a>
+                    <a href="#services" class="hover:text-amber-400 transition">服務範疇</a>
+                    <a href="#advantage" class="hover:text-amber-400 transition">跨界優勢</a>
+                    <a href="#contact" class="hover:text-amber-400 transition">聯絡諮詢</a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition flex items-center gap-1.5 text-blue-400 font-medium" title="Facebook 粉絲專頁">
+                        <i class="fa-brands fa-facebook text-base"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p>© 2026 米米家族辦公室 (Mimi Family Office). All Rights Reserved.</p>
+                    <p class="mt-1 text-[10px] text-slate-600">本網站內容僅供資訊參考，具體財務與稅務規劃須依個案實際狀況面談後制定。</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Floating Quick Contact Bar -->
+    <div class="fixed bottom-4 left-4 right-4 z-40 md:hidden">
+        <a href="#contact" class="w-full py-3.5 px-6 rounded-full gold-gradient-bg text-slate-950 font-bold text-sm shadow-2xl flex items-center justify-center gap-2 border border-amber-300/30">
+            <i class="fa-solid fa-calendar-check text-slate-950"></i>
+            預約張清俊顧問 專屬諮詢
+        </a>
+    </div>
+
+    <!-- Background Audio Element -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="https://img.ai365.fans/artworks/187d0335-0629-43a3-96a2-eeb37e480764/5po6w6xbn7o.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Background Music Control Logic
+        const bgMusic = document.getElementById('bg-music');
+        let isMusicPlaying = false;
+
+        function toggleMusic() {
+            if (!bgMusic) return;
+
+            if (isMusicPlaying) {
+                bgMusic.pause();
+                isMusicPlaying = false;
+                updateMusicUI();
+            } else {
+                bgMusic.play().then(() => {
+                    isMusicPlaying = true;
+                    updateMusicUI();
+                }).catch(err => {
+                    console.log("Autoplay issue or playback error: ", err);
+                });
+            }
+        }
+
+        function updateMusicUI() {
+            const iconDesktop = document.getElementById('music-icon-desktop');
+            const iconMobile = document.getElementById('music-icon-mobile');
+            const pulseDesktop = document.getElementById('music-pulse-desktop');
+            const btnDesktop = document.getElementById('music-btn-desktop');
+
+            if (isMusicPlaying) {
+                if (iconDesktop) iconDesktop.className = 'fa-solid fa-volume-high text-base text-amber-400 animate-pulse';
+                if (iconMobile) iconMobile.className = 'fa-solid fa-volume-high text-base text-amber-400 animate-pulse';
+                if (pulseDesktop) pulseDesktop.classList.remove('hidden');
+                if (btnDesktop) btnDesktop.classList.add('border-amber-500/80', 'bg-amber-500/10');
+            } else {
+                if (iconDesktop) iconDesktop.className = 'fa-solid fa-music text-base text-slate-300';
+                if (iconMobile) iconMobile.className = 'fa-solid fa-music text-base text-slate-300';
+                if (pulseDesktop) pulseDesktop.classList.add('hidden');
+                if (btnDesktop) btnDesktop.classList.remove('border-amber-500/80', 'bg-amber-500/10');
+            }
+        }
+
+        // Theme Switching Logic
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('light-mode');
+            const isLight = body.classList.contains('light-mode');
+            
+            // Save preference
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+
+        function updateThemeIcons(isLight) {
+            const desktopIcon = document.getElementById('theme-icon-desktop');
+            const mobileIcon = document.getElementById('theme-icon-mobile');
+            
+            if (isLight) {
+                if(desktopIcon) desktopIcon.className = 'fa-solid fa-moon text-base text-slate-700';
+                if(mobileIcon) mobileIcon.className = 'fa-solid fa-moon text-base text-slate-700';
+            } else {
+                if(desktopIcon) desktopIcon.className = 'fa-solid fa-sun text-base text-amber-400';
+                if(mobileIcon) mobileIcon.className = 'fa-solid fa-sun text-base text-amber-400';
+            }
+        }
+
+        // Initialize Theme preference on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+                updateThemeIcons(true);
+            }
+        });
+
+        // Mobile Drawer Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission Logic (Without using alert)
+        function submitForm() {
+            const name = document.getElementById('form-name').value;
+            const successBox = document.getElementById('form-success');
+            
+            if(name) {
+                successBox.classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('contact-form').reset();
+                }, 1000);
+            }
+        }
+
+        // Assessment Tool Calculation Logic
+        let selectedNeedsSummary = "";
+
+        function calculateAssessment() {
+            const checkboxes = document.querySelectorAll('input[name="need"]:checked');
+            const resultBox = document.getElementById('assessment-result');
+            const resultText = document.getElementById('assessment-text');
+
+            if (checkboxes.length === 0) {
+                resultText.textContent = "請至少選擇一項您關注的議題，以便張清俊顧問為您量身分析。";
+                resultBox.classList.remove('hidden');
+                return;
+            }
+
+            const selectedValues = Array.from(checkboxes).map(cb => cb.value);
+            let recommendations = [];
+
+            if (selectedValues.includes('tax') || selectedValues.includes('heritage')) {
+                recommendations.push("【資產傳承與稅務】建議優先進行家族資產結構梳理，預防不必要的遺贈稅與房地合一稅負擔。");
+            }
+            if (selectedValues.includes('insurance')) {
+                recommendations.push("【風險防禦】進行家族保單健檢，優化預留稅源與資產隔離效果。");
+            }
+            if (selectedValues.includes('overseas') || selectedValues.includes('loan')) {
+                recommendations.push("【跨境與資金調度】構建合規之境內外資產流動通道，並運用高效融資槓桿增加資金彈性。");
+            }
+            if (selectedValues.includes('ai')) {
+                recommendations.push("【AI智慧決策】導入 AI 數據模擬工具，進行多重情境資產壓力測試與最佳化配置。");
+            }
+
+            selectedNeedsSummary = `已選擇 ${checkboxes.length} 項關注課題：\n` + recommendations.join("\n");
+            resultText.innerText = selectedNeedsSummary;
+            resultBox.classList.remove('hidden');
+        }
+
+        function fillFormFromAssessment() {
+            if(selectedNeedsSummary) {
+                document.getElementById('form-message').value = "【系統自動帶入測驗結果】\n" + selectedNeedsSummary;
+            }
+        }
+    </script>
+</body>
+</html>
